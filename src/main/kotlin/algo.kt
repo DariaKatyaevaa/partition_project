@@ -3,7 +3,7 @@
  * длины height(p1, p2) элементарных преобразований от разбиения p1 до разбиения p2 в случае, когда
  * p1 ≥ p1.
  */
-fun firstAlgorithm(p1: Partition, p2: Partition) {
+fun searchShortestSequence(p1: Partition, p2: Partition) {
     val pair = Partition.equalizeSequenceLengths(p1, p2)
     var a = pair.first
     val b = pair.second
@@ -30,7 +30,7 @@ fun firstAlgorithm(p1: Partition, p2: Partition) {
 
 
 fun main() {
-    val p1 = Partition(listOf(14, 9, 7, 6, 1, 1))
-    val p2 = Partition(listOf(10, 9, 6, 3, 3, 1, 1, 1))
-    firstAlgorithm(p1, p2)
+    val p1 = Partition(listOf(12, 9, 7, 6, 1, 1))
+    val p2 = Partition(listOf(10, 9, 6, 3, 1, 1, 1 ))
+    searchShortestSequence(p1, p2)
 }
